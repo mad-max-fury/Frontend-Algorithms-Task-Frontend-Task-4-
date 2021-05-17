@@ -1,7 +1,4 @@
 
-
-
-
 convertFahrToCelsius = (Fahr) => {
 
   if (Fahr == null) {
@@ -11,7 +8,7 @@ convertFahrToCelsius = (Fahr) => {
     let regex = /[a-zA-Z]/
     regexResult = regex.test(Fahr)
     if (regexResult === true && typeof Fahr !== 'object' && Fahr !== null) {
-      console.log(`'${Fahr}'  is not a valid number but a/an string`)
+      console.log(`"${Fahr}"`, `is not a valid number but a/an string`)
     }
     else if (Array.isArray(Fahr) === true) {
       console.log(Fahr, `is not a valid number but a/an array`)
@@ -21,14 +18,14 @@ convertFahrToCelsius = (Fahr) => {
     }
     else {
       let F = Number(Fahr)
-      // console.log(typeof F)
+
       let C = ((F - 32) * 100) / 180
-      console.log(C.toFixed(4) + ' ' + 'deg C');
+      console.log(C.toFixed(4));
     }
   }
 
 }
-convertFahrToCelsius(0)
+convertFahrToCelsius('yello')
 
 
 checkYuGiOh = (n) => {
@@ -88,4 +85,7 @@ checkYuGiOh = (n) => {
 
 
 }
-checkYuGiOh('stress');
+checkYuGiOh({ number: 20 });
+
+
+
